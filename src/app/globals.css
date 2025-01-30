@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+}
+
+@layer utilities {
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.title-animation {
+  letter-spacing: 8px;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: 1s;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    letter-spacing: 8px;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+}
